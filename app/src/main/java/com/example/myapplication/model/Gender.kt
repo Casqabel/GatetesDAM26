@@ -1,0 +1,9 @@
+package com.example.myapplication.model
+
+enum class Gender(val symbol: String) {
+    FEMALE("\u2640"),
+    MALE("\u2642"),
+    UNKNOWN("?")
+
+
+}
