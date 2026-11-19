@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="catName">Nombre:</string>
+    <string name="catBiography">"Biografía: "</string>
+    <string name="add_button">Añadir gato</string>
 </resources>

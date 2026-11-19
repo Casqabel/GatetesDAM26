@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -15,11 +16,14 @@ import com.example.myapplication.model.CatUiModel
 @Composable
 fun CatItem(
     cat: CatUiModel,
-    onClick: ()->Unit={}
+    onClick: ()->Unit={},
+    onLongClick: ()->Unit={}
 ){
-    Row(modifier = Modifier.clickable{
-        onClick()
-    }
+    Row(modifier = Modifier.combinedClickable(
+        onClick = onClick,
+        onLongClick = onLongClick
+
+    )
         .fillMaxWidth()
     ){
         if(cat.imageUrl.isEmpty()){
